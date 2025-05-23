@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%- include ('./partials/head.ejs') %>
+    
+    <title>Crear nuevo producto</title>
+
+</head>
+<body>
+
+<!-- -------- HEADER -------- -->
+<%- include('./partials/header.ejs') %>
+
+<!-- -------- MAIN -------- -->
+<main>
+        <h1 class="titulo-crear-vista">Crear nuevo producto</h1>
+        
+        <form class="formulario-crear-producto" action="/productos/crear" method="POST" enctype="multipart/form-data">
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+            </div>
+            <div>
+                <label for="marca">Marca:</label>
+                <input type="text" id="marca" name="marca" placeholder="Marca" required>
+            </div>
+            <div>
+                <label for="categoria">Categoria:</label>
+                <select name="categoria">
+                    <option value="Componentes para PC" selected>Componentes para PC</option>
+                    <option value="Accesorios y Periféricos">Accesorios y Periféricos</option>
+                    <option value="Consolas">Consolas</option>
+                    <option value="Videojuegos">Videojuegos</option>
+                    <option value="Accesorios para consolas">Accesorios para consolas</option>
+                </select>
+            </div>
+            <div>
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" placeholder="Descripcion"></textarea>
+            </div>
+            <div>
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio" placeholder="Precio" required>
+            </div>
+            <div class="div-imagenes-crear">
+                <div class="imagenes-crear">
+                    <label for="imagen">Imagen:</label>
+                    <input type="file" id="imagen" name="imagen">
+                </div>
+                <div id="imagenPreviaCrear" class="imagen-previa-crear">
+                </div>
+            </div>
+            <div class="crear-botones">
+                <a href="/productos"><button type="button">Cancelar</button></a>
+                <a href="/"><button type="submit">Crear Producto</button></a>
+            </div>
+        </form>
+</main>
+
+<!-- -------- FOOTER -------- -->
+<%- include('./partials/footer.ejs') %>
+
+<script src="/script.js"></script>
+<script src="/scriptCrearVista.js"></script>
+
+</body>
+</html>

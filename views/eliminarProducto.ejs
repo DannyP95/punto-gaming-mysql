@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <%- include ('./partials/head.ejs') %>
+    
+    <title>Crear nuevo producto</title>
+
+</head>
+<body>
+
+<!-- -------- HEADER -------- -->
+<%- include('./partials/header.ejs') %>
+
+<!-- -------- MAIN -------- -->
+<main>
+    <div class="eliminar-producto-vista">
+        <h1>Producto eliminado</h1>
+        <div class="eliminar-nombre-marca">
+            <h3><%= producto.nombre %> </h3>
+            <h4><%= producto.marca %> </h4>
+        </div>
+        <div class="eliminar-imagen">
+            <img src="/images/<%= producto.imagen %>">
+        </div>
+        <div class="eliminar-botones">
+            <a href="/"><button>Ir al inicio</button></a>
+            <a href="/productos"><button>Volver</button></a>
+        </div>
+    </div>
+</main>
+
+<!-- -------- FOOTER -------- -->
+<%- include('./partials/footer.ejs') %>
+
+<script src="/script.js"></script>
+
+
+</body>
+</html>

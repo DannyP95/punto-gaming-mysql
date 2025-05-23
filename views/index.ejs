@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Punto Gaming</title>
+  <%- include ('./partials/head.ejs') %>
+
+</head>
+<body>
+<!-- -------- HEADER -------- -->
+
+  <%- include ('./partials/header.ejs') %>
+
+  <main>
+
+    <!-- -------- CARRUSEL -------- -->
+    <section id="carruselHome" class="carrusel-home">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+          <img src="./images/carousel0.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img src="./images/carousel1.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img src="./images/carousel2.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      </div>            
+    </section>
+    
+    <!-- -------- TÍTULO DE BIENVENIDA -------- -->
+    
+    <div class="titulo-bienvenida">
+      <i class="fas fa-gamepad icono-titulo"></i>
+      <h1> ¡Bienvenido a Punto Gaming! </h1>
+      <i class="fas fa-gamepad icono-titulo"></i>
+    </div>
+    
+    <!-- -------- PRODUCTOS -------- -->
+    
+    <section id="productos" class="productos-index">
+      <div class="producto-index">
+        <div class="producto-img">
+          <img src="./images/producto1.png" alt="">
+        </div>
+        <h3>Playstation 5 Slim 1TB Standard</h3>
+        <div class="producto-descripcion">
+          <p>Playstation 5 Slim 1TB Standard Color Blanca con 1 Mando</p>
+        </div>
+        <h2>$ 980.000</h2>
+      </div>
+      
+      <div class="producto-index">
+        <div class="producto-img">
+          <img src="./images/producto2.jpg" alt="">
+        </div>
+        <h3>Nintendo Switch Oled 64Gb Red Mario</h3>
+        <div class="producto-descripcion">
+          <p>Consola Nintendo Switch Oled 64Gb edición colección de Mario color roja</p>
+        </div>
+        <h2>$ 620.000</h2>
+      </div>
+      
+      <div class="producto-index">
+        <div class="producto-img">
+          <img src="./images/producto3.png" alt="">
+        </div>
+        <h3>Joystick inalámbrico Redragon</h3>
+        <div class="producto-descripcion">
+          <p>Joystick inalámbrico Redragon Harrow G808 color Negro, este genera un mayor control preciso, dando una mayor comodidad y realismo</p>
+        </div>
+        <h2>$ 51.200</h2>
+      </div>
+      
+      <div class="producto-index">
+        <div class="producto-img">
+          <img src="./images/producto4.jpg" alt="">
+        </div>
+        <h3>Consola Steam Deck OLED 1TB White Limited Edition</h3>
+        <div class="producto-descripcion">
+          <p>Pantalla OLED más grande, mayor duración de la batería y wifi más rápida, además de ergonomía de primera clase y una experiencia intuitiva, similar a la de una consola.</p>  
+        </div>
+        <h2>$ 1.620.000</h2>        
+      </div>
+      
+      <div class="producto-index">
+        <div class="producto-img">
+          <img src="./images/producto5.png" alt="">
+        </div>
+        <h3>EA Sports Fc 25 Ps5 Juego Físico Sellado Original</h3>
+        <div class="producto-descripcion">
+          <p>EA SPORTS FC 25 (EX FIFA) físico sellado. Version americana con relatos en español latinoamericano para descargar gratuitamente desde la Store de PS5</p>
+        </div>
+        <h2>$ 120.000</h2>
+      </div>
+      
+      <div class="producto-index">
+        <div class="producto-img">
+          <img src="./images/producto6.png" alt="">
+        </div>
+        <h3>Mando para Nintendo Switch edición Mario con Cable</h3>
+        <div class="producto-descripcion">
+          <p>Mando Marca "Power A" Con Cable edición Woo Hoo Mario Color Rojo compatible con Nintendo Switch y Nintendo Switch OLED, incluye su cable USB</p>
+        </div>
+        <h2>$ 85.000</h2>
+      </div>
+      
+      <div class="producto-index">
+        <div class="producto-img">
+          <img src="./images/producto7.png" alt="">
+        </div>
+        <h3>Tarjeta Gráfica Evga Geforce Gtx 1080 Ti Ftw3 Dt Gaming 11gb</h3>
+        <div class="producto-descripcion">
+          <p>Tecnología iCX GDDR5X de EVGA GeForce GTX 1080 Ti FTW3 DT Gaming de 11 GB con 9 sensores de temperatura adicionales para monitorear la memoria con indicador de estado térmico PWM y el VRM.</p>
+        </div>
+        <h2>$ 1.580.000</h2>
+      </div>
+      
+      <div class="producto-index">
+        <div class="producto-img">
+          <img src="./images/producto8.png" alt="">
+        </div>
+        <h3>Pokémon Violeta Edition Nintendo Switch Físico</h3>
+        <div class="producto-descripcion">
+          <p>Con este juego de Pokémon vas a disfrutar de horas de diversión y de nuevos desafíos que te permitirán mejorar como gamer.</p>  
+        </div>
+        <h2>$ 97.500</h2>        
+      </div>
+    </section> 
+  </main>
+
+  
+<!-- -------- FORMULARIO -------- -->
+
+  <h1 id="tituloFormulario" class="titulo-formulario">¡ Registrate !</h1>
+
+  <form id="formularioHome" class="formulario-home" action="">
+    <label for="nombre">Nombre: </label>
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    
+    <label for="apellido">Apellido: </label>
+    <input type="text" name="apellido" placeholder="Apellido" required>
+    <label for="email">Email: </label>
+    <input type="email" name="email" placeholder="Email" required>
+    <label for="password">Contraseña: </label>
+    <input type="password" name="password" placeholder="Contraseña" required>
+    <label for="passwordConfirm">Confirme su contraseña: </label>
+    <input type="password" name="passwordConfirm" placeholder="Confirme su contraseña" required>
+    <label for="comentarios">Comentarios: </label>
+    <textarea name="comentarios" placeholder="Comentarios"></textarea>
+    
+    <button type="submit" class="btn-formulario" id="btnFormHome">Enviar</button>
+    
+  </form>
+
+<!-- -------- FOOTER -------- -->
+ 
+  <%- include ('./partials/footer.ejs') %>
+    
+<script src="/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Productos de nuestra tienda</title>
+    <%- include ('./partials/head.ejs') %>
+</head>
+<body>
+
+<!-- -------- HEADER -------- -->
+ 
+    <%- include ('./partials/header.ejs') %>
+
+<!-- -------- MAIN -------- -->
+    <section id="productos" class="productos">
+        <% productos.forEach(producto => { %>
+            <div class="producto">
+                    <div class="producto-img">
+                        <img src="./images/<%= producto.imagen %>">
+                    </div>
+                    <h2><%= producto.nombre %></h2>
+                    <h3><%= producto.marca %></h3>
+                    <h4><%= producto.categoria ? producto.categoria : 'Sin Categoria' %></h4>
+                    <div class="producto-descripcion">
+                        <p><%= producto.descripcion %></p>
+                    </div>
+                    <h5>$ <%= producto.precio %></h5>
+
+                    <div class="btn-productos">
+                        <form class="formulario-btn-eliminar" action="/productos/eliminar/<%= producto.id %>?_method=DELETE" method="POST">
+                            <button type="submit">Eliminar</button>
+                        </form>
+                        <a href="/productos/<%=producto.id%>"><button>Editar</button></a>
+                    </div>
+                
+                </div>
+                <% }) %>
+            </section>
+            
+            <div class="btn-crear-producto">
+                <a href="/productos/crear">
+                    <button>Crear nuevo producto</button>
+                </a> 
+            </div>
+            
+<!-- -------- FOOTER -------- -->
+
+    <%- include ('./partials/footer.ejs') %>
+    
+    <script src="/script.js"></script>
+    
+</body>
+</html>

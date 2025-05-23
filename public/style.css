@@ -1,0 +1,1113 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* --------------- BODY --------------- */
+body{
+    background-color: rgb(0, 0, 114) !important;
+    color: white !important;
+}
+/* --------------- HEADER --------------- */
+
+/* --------------- NAV --------------- */
+
+.navbar-home{
+    display: flex;  
+    padding: 0;
+    background-color: black;
+    color: white;
+    height: 0;
+}
+
+.contenido-navbar{
+    opacity: 0;
+    /* overflow: hidden; */
+    visibility: hidden;
+    transition: opacity 0.5s ease, ease, visibility 0.5s;
+}
+
+.menu-burguer{
+    margin: auto;
+    width: 100%;
+    display: flex !important;
+    justify-content: center;
+    background-color: rgb(0, 0, 114);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 30px 0;
+    border-bottom: 2px solid black
+}
+
+.menu-burguer i{
+    margin: auto 15px;
+}
+
+#flechaMenu{
+    transition: transform 0.3s ease;
+}
+
+.flecha-menu{
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+
+
+.mostrar-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 2rem;
+    margin: auto;
+    position: fixed;
+    z-index: 2;
+    background-color: black;
+    padding: 6px 0;
+    font-size: 3rem;
+    opacity: 1;
+    height: auto;
+    visibility: visible;
+    padding: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* .contenido-navbar{
+    transition: 3s ease;
+
+} */
+
+.contenido-navbar li{
+    text-decoration: none;
+    list-style: none;
+    width: 80%;
+    border: 2px black solid;
+    background-color: rgb(0, 0, 114);
+    align-content: center;
+    font-size: 50%;
+    padding: 15px 0;
+}
+
+.contenido-navbar li i{
+    margin-right: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.items-navbar {
+    text-transform: uppercase;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    color: white; 
+    font-size: 100%;
+}
+
+/* #homeButton{
+    border-top: 2px black solid;
+} */
+
+/* --------------- MAIN --------------- */
+
+main{
+    margin-bottom: 30px;
+}
+
+/* --------------- TITULO DE BIENVENIDA --------------- */
+
+.titulo-bienvenida{
+    display: flex;
+    width: auto;
+    padding: 10px 5px;
+    background-color: black;
+    opacity: 0.7;
+    text-align: center;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-bienvenida h1{
+    font-size: 100%;
+    margin: 0 10px;
+}
+
+.titulo-bienvenida i{
+    font-size: 100%;
+}
+
+/* --------------- CARRUSEL --------------- */
+
+.carrusel-home .carousel-inner {
+   height: 185px; 
+}
+
+.carousel-item{
+    height: 100%;
+}
+
+.carrusel-home .carousel-inner img {
+  height: 100%;
+  object-fit: fill; 
+  width: 100% !important;
+}
+
+
+/* --------------- PRODUCTOS INDEX --------------- */
+
+.productos-index{
+    margin: 7% 0;
+    padding: 4px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.producto-index{
+    width: 70%;
+    height: fit-content;
+    /* height: 800px; */
+    margin: 15px;
+    background-color: rgb(0, 0, 0, 0.5);
+    border: black 2px solid;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.producto-index h2, .producto-index h3, .producto-index p{
+    padding: 0 15px;
+}
+
+.producto-index h2{
+    margin-bottom: auto;
+}
+
+.producto-index img{
+    width: 100%;
+    height: 60%;
+    border-radius: 15px 15px 0 0;
+    object-fit: fill;
+}
+
+.producto-index h3{
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.producto-index-descripcion p{
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.producto-index h2{
+    margin-right: 8%;
+    text-align: end;
+}
+
+
+
+/* --------------- PRODUCTOS --------------- */
+
+.productos{
+    margin: 7% 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.producto{
+    padding: 0;
+    width: 100%;
+    height: fit-content;
+    /* height: 800px; */
+    margin: 15px;
+    background-color: rgb(0, 0, 0, 0.5);
+    border: black 2px solid;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.producto h2, .producto h3, .producto h4, .producto p{
+    padding: 0 15px;
+}
+
+.producto h2{
+    /* margin-bottom: auto; */
+    /* margin-right: 8%; */
+    font-size: 20px;
+    text-align: center;
+}
+
+.producto img{
+    width: 100%;
+    height: 60%;
+    border-radius: 15px 15px 0 0;
+    object-fit: fill;
+}
+
+.producto h3{
+    font-size: 15px;
+}
+
+.producto h4{
+    font-size: 12px;
+    color: gray;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.producto-descripcion p{
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.producto h5{
+    margin: 0;
+    padding-right: 10px;
+    text-align: end;
+    font-size: 30px;
+}
+
+
+/* --------------- BOTONES DE PRODUCTO --------------- */
+
+
+.btn-crear-producto{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.btn-crear-producto button{
+    padding: 20px;
+    text-transform: uppercase;
+    background-color: lightskyblue;
+    border-radius: 20px;
+    font-style: italic;
+}
+
+/* --------------- TÍTULO DEL FORMULARIO --------------- */
+
+.titulo-formulario{
+    text-align: center;
+    padding: 15px;
+    margin: 0 auto;
+    width: 80%;
+    border: 2px solid black;
+    border-radius: 15px 15px 0 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    border-bottom: none;
+}
+
+/* --------------- FORMULARIO --------------- */
+
+.formulario-home{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;    
+    margin-bottom: 50px;
+    margin-top: 0;
+    padding: 20px 10px;
+    border: black solid 2px;
+    border-radius: 15px;
+}
+
+.formulario-home label{
+    margin-top: 15px;
+    padding-left: 5px;
+    text-transform: uppercase;
+}
+
+.formulario-home input, .formulario-home textarea{
+    border-radius: 0px 0px 6px 6px;
+    padding-left: 10px;
+}
+
+.formulario-home button{
+    margin: auto;
+    margin-top: 20px;
+}
+
+.btn-formulario{
+    width: 35%;
+    margin-top: 15px;
+    padding: 4px 0;
+    margin-left: auto;
+    text-transform: uppercase;
+    color: white;
+    background-color: rgb(0, 0, 0, 0.5);
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.btn-productos{
+    width: 95%;
+    margin: 10px 5px;
+    align-items: center;
+    display: block
+}
+
+.btn-productos button{
+    width: 250px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    padding: 5px 10px;
+    border: 2px solid rgb(0, 0, 114);
+    border-radius: 15px;
+    background-color: white;
+    color: blue;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.formulario-btn-eliminar, .btn-productos a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    margin: 0 5px;
+    padding: 0;
+}
+
+/* --------------- PÁGINA CREAR PRODUCTO --------------- */
+
+.titulo-crear-vista{
+    font-size: 22px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.formulario-crear-producto{
+    border: 3px solid black;
+    border-radius: 12px;
+    align-items: center;
+    margin: 0 10px;
+    padding: 5px 10px;
+    font-size: x-small;
+
+}
+
+.formulario-crear-producto div{
+    width: 100%;
+    padding-top: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.formulario-crear-producto label{
+    margin-top: 0;
+    padding-left: 5px;
+    text-transform: uppercase;
+    width: 30%;
+    text-align: end;
+    margin-right: 10px;
+}
+
+.formulario-crear-producto input, .formulario-crear-producto select, .formulario-crear-producto textarea{
+    border-radius: 0px 0px 6px 6px;
+    padding-left: 10px;
+    width: 70%;
+    margin-left: 0;
+}
+
+/* BOTON CREAR NUEVO PRODUCTO  */
+
+.crear-botones{
+    padding: 0;
+}
+
+.crear-botones, .eliminar-botones{
+    flex-direction: column;
+}
+
+.crear-botones button, .eliminar-botones button{
+    width: 85%;
+    margin: 3px auto;
+    padding: 5px 10px;
+    border: 2px solid rgb(0, 0, 114);
+    border-radius: 15px;
+    background-color: white;
+    color: blue;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.crear-botones button:hover, .eliminar-botones button:hover{
+    border: 2px solid white;
+    color: white;
+    background-color: rgb(0, 0, 114);
+}
+
+.crear-botones a{
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+}
+
+.div-imagenes-crear{
+    flex-direction: column;
+}
+
+.imagenes-crear{
+    flex-direction: row;
+}
+
+.imagenes-crear input{
+    margin-left: -10px;
+}
+
+.imagen-previa-crear{
+    width: 50% !important;
+    margin: auto;
+}
+
+.imagen-previa-visualizada{
+    margin: auto;
+    width: 100%;
+}
+
+/* BOTONES DE PAGINA PRODUCTOS (Dentro de los productos)  */
+
+.btn-productos a{
+    text-decoration: none;
+}
+
+.btn-productos button{
+    width: 250px;
+    margin: 3px auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* --------------- FORMULARIO EDITAR PRODUCTO --------------- */
+
+.contenedor-vista-editar h1{
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.formulario-editar{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;    
+    margin-bottom: 50px;
+    margin-top: 0;
+    padding: 20px 10px;
+    border: black solid 2px;
+    border-radius: 15px;
+}
+
+.formulario-editar div{
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-editar label, .formulario-editar p{
+    width: 100%;
+    margin-top: 15px;
+    padding-left: 5px;
+    text-transform: uppercase;
+}
+
+.formulario-editar input, .formulario-editar textarea{
+    width: 100%;
+    border-radius: 0px 0px 6px 6px;
+    padding-left: 10px;
+}
+
+.formulario-editar #imagen{
+    text-overflow: ellipsis;
+    font-size: 12px;
+}
+
+
+.formulario-editar img{
+    width: 50%;
+    margin: 0 auto 10px auto;
+}
+
+.btn-editar-view{
+    width: 95%;
+    align-items: center;
+    display: block;
+    text-decoration: none;
+    padding: 0;
+}
+
+.btn-editar-view a{
+    padding: 0;
+}
+
+.btn-editar-form{
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.btn-editar-view button, .btn-editar-view a{
+    width: 100%;
+    margin: 3px 0px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    padding: 5px 10px;
+    border: 2px solid rgb(0, 0, 114);
+    border-radius: 15px;
+    background-color: white;
+    color: blue;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.btn-editar-view button:hover{
+    border: 2px solid white;
+    color: white;
+    background-color: rgb(0, 0, 114);
+}
+
+
+/* --------------- PÁGINA ELIMINAR PRODUCTO --------------- */
+
+.eliminar-producto-main{
+    height: 450px;
+    display: flex;
+}
+
+.eliminar-producto-vista{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.eliminar-producto-vista h1{
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+
+.eliminar-nombre-marca{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.eliminar-imagen {
+    width: 70%;
+    padding: 20px 0;
+}
+
+.eliminar-imagen img{
+    width: 100%;
+}
+
+.eliminar-botones a{
+    text-decoration: none;
+}
+
+.eliminar-botones button{
+    width: 250px;
+    margin: 3px auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* --------------- FOOTER --------------- */
+
+footer{
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 0;
+    border-top: rgb(255, 255, 255, 0.3) solid 0.5px;
+}
+
+footer div{
+    width: 95%;
+    margin-top: 15px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.footer-contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-contacto h3{
+    font-size: 10px !important;
+}
+
+.footer-contacto a{
+    text-decoration: none !important;
+    color: white;
+}
+
+.footer-redes{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-redes i{
+    display: flex;
+    margin: 0;
+    padding: 10px;
+    border-radius: 25%;
+    height: 82px;
+    width: 23%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+}
+
+.footer-derechos{
+    display: flex;
+    justify-content: center;
+    font-size: 8px;
+    padding-bottom: 0px;
+}
+
+.logo-instagram{
+    background: radial-gradient(
+        circle at 33% 100%,
+        #fed373 4%,
+        #f15245 30%,
+        #d92e7f 62%,
+        #9b36b7 85%,
+        #515ecf);
+}
+
+.logo-facebook{
+   color: white;
+   border: 2px solid white;
+   padding: 10px 20px !important;
+}
+
+.logo-whatsapp{
+    color: white;
+    background-color: rgb(0, 114, 28);
+}
+
+.logo-tiktok{
+    background-color: black;
+    color: white;
+}
+
+/* ---------------------------------------------------------------------------------------------------- */
+/* -----------------------------------     MEDIA QUERY'S     ------------------------------------------ */
+/* ---------------------------------------------------------------------------------------------------- */
+  
+/* --------------- TABLET --------------- */
+
+@media (min-width: 768px) {
+
+    .menu-burguer{
+        display: none !important;
+    }
+
+    .navbar-home{
+        height: auto;
+    }
+    
+
+    .contenido-navbar{
+        margin: 0;
+        padding: 2px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        align-items: center;
+        background-color: black;
+        /* opacity: 0.7; */
+        flex-wrap: nowrap;
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .contenido-navbar li{
+        width: 100%;
+        font-size: 100%;
+        background-color: rgb(0, 0, 114,0.7);
+    }
+
+    .carrusel-home .carousel-inner {
+        height: 250px; 
+    }
+
+    /* PRODUCTOS INDEX */
+
+    .productos-index{
+        margin: 2% 0;
+        justify-content: space-around;
+    }
+
+    .producto{
+        width: 43%;
+        height: 550px;
+    }
+
+    .product-descripcion{
+        overflow-y: scroll;
+        height: auto;
+    }
+
+    .producto img{
+        height: 210px;
+    }
+
+    .formulario-home{
+        margin: 10px 40px;
+    }
+
+    /* PRODUCTOS */
+
+    .productos{
+        margin: 2% 0;
+        justify-content: space-around;
+    }
+
+    .producto-index{
+        width: 43%;
+        height: 400px;
+        margin-top: 0;
+    }
+
+    .producto-index h2{
+        margin-bottom: auto;
+    }
+
+    .producto-descripcion{
+        overflow-y: scroll;
+    }
+
+    .producto-index img{
+        height: 210px;
+    }
+
+    .btn-crear-producto {
+        width: 100%;
+        font-size: medium;
+    }
+
+    .btn-crear-producto button{
+        padding: 20px 75px;
+    }
+
+    .formulario-btn-eliminar, .btn-productos a{
+        margin: 5px 10px;
+    }
+
+    /* --------------- PÁGINA CREAR PRODUCTO --------------- */
+    
+    .formulario-crear-producto{
+        margin: 0 40px;
+    }
+    
+    .formulario-crear-producto label{
+        width: 25%;
+        font-size: 15px;
+    }
+    
+    .formulario-crear-producto input, .formulario-crear-producto textarea, .formulario-crear-producto select{
+        width: 70%;
+        font-size: 15px;
+
+    }
+    
+    .crear-botones{
+        display: flex !important;
+        justify-content: space-evenly;
+    }
+    
+    .crear-botones button{
+        width: 40%;
+    }
+    /* --------------- PÁGINA ELIMINAR PRODUCTO --------------- */
+    
+    .eliminar-imagen{
+        width: 70%;
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .eliminar-imagen img{
+        width: auto;
+        max-height: 300px;
+    }
+    
+    /* --------------- PÁGINA EDITAR PRODUCTO --------------- */
+
+    .formulario-editar {
+        margin: 10px 30px;
+    }
+
+    .editar-img-vista-previa p{
+        text-align: center;
+    }
+
+    .formulario-editar img {
+        max-height: 120px;
+        padding: 0 50px;
+}
+
+/* --------------- LAPTOP --------------- */
+
+@media (min-width: 1023px) {
+
+    /* .contenido-navbar{
+        background-color: rgb(0, 0, 114);
+    }
+
+    .contenido-navbar li{
+        width: auto;
+        font-size: 1rem;
+    }
+    
+    #homeButton{
+        padding-right: 20px;
+        padding-left: 20px;
+    } */
+
+    .carrusel-home .carousel-inner {
+       height: 400px; 
+    }
+
+    /* .items-navbar{
+        opacity: 1;
+    } */
+
+    .contenido-navbar{
+        padding: 0;
+        opacity: 1;
+    }
+    .contenido-navbar li {
+        border: none;
+        border-radius: 0;
+        padding: 0;
+    }
+
+
+    .items-navbar:hover {
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 114); 
+    }
+
+    #homeButton:hover{
+        background-color: white;
+        color: black;
+    }
+
+    .items-navbar {
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* PRODUCTO INDEX */
+
+    .producto-index{
+        width: 21%;
+        flex-shrink: 0;    
+        justify-content: flex-start   
+    }
+
+    .producto-index h3{
+        font-size: 15px;
+    }
+
+    .producto-descripcion{
+        overflow-y: hidden;
+        /* transition: max-height 10s ease; */
+    }
+
+    .producto-descripcion:hover{
+        overflow-y: auto;
+        /* max-height: 500px; */
+    }
+
+    /* PRODUCTO  */
+
+    .producto{
+        width: 21%;
+        flex-shrink: 0;    
+        justify-content: flex-start;
+    }
+
+    .producto h3{
+        font-size: 15px;
+    }
+
+    .producto-descripcion{
+        overflow-y: hidden;
+        /* transition: max-height 10s ease; */
+    }
+
+    .producto-descripcion:hover{
+        overflow-y: auto;
+        /* max-height: 500px; */
+    }
+
+    .titulo-formulario{
+        width: 60%;
+    }
+
+    .btn-crear-producto{
+        width: 26%;
+        font-size: 1rem;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+    }
+
+    .btn-crear-producto button:hover{
+        background-color: white;
+        color: rgb(0, 0, 114);
+    }
+
+    .btn-crear-producto button{
+        padding: 10px;
+        width: 50%;
+    }
+
+    /* --------------- PÁGINA CREAR PRODUCTO --------------- */
+    
+    .formulario-crear-producto{
+        width: 80%;
+        text-align: center;
+        margin: auto;
+    }
+    
+    .crear-botones button{
+        width: 300px;
+    }
+/* --------------- PÁGINA CREAR PRODUCTO --------------- */
+
+.eliminar-imagen img{
+    width: auto;
+    max-height: 500px;
+}
+
+.eliminar-botones{
+    display: flex !important;
+    justify-content: space-evenly;
+}
+
+/* .eliminar-botones { */
+/* width: 300px; */
+/* align-items: center;
+display: block !important;
+    display: flex !important
+    ;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto; */
+    
+/* --------------- PÁGINA CREAR PRODUCTO --------------- */
+
+.formulario-editar{
+    width: 69%;
+    margin: auto;
+}
+
+.contenedor-vista-editar h1{
+    font-size: 30px;
+}
+
+.formulario-editar div{
+    flex-direction: row;
+    margin: 10px 0px;
+}
+
+.formulario-editar label, .editar-img-vista-previa p{
+    width: 28%;
+    text-align: end;
+    margin: auto 0px;
+    margin-right: 7px;
+}
+
+.formulario-editar input, .formulario-editar textarea, .editar-img-vista-previa img, .formulario-editar select{
+    width: 69% !important;
+}
+
+.contenedor-imagenes-editar{
+    flex-wrap: wrap;
+}
+
+.editar-img-vista-previa {
+    width: 100%;
+}
+
+.editar-img-vista-previa img{
+    max-height: 200px;
+    padding-right: 150px;
+    /* padding-left: 20px; */
+}
+
+.btn-editar-view{
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.btn-editar-view button, .btn-editar-view a {
+    width: 30%;
+}
+/* --------------- PÁGINA ELIMINAR PRODUCTO --------------- */
+    
+    
+    
+    .formulario-home{
+        width: 60%;
+        margin: 0 auto;
+        padding: 50px 35px;
+        width: 60%;
+        border-radius: 0 0 15px 15px;
+        margin-bottom: 50px;
+    }
+
+    footer{
+        flex-direction: row;
+    }
+
+    .footer-contacto h3{
+        font-size: 20px !important;
+    }
+
+    .footer-derechos{
+        font-size: 15px;
+        justify-content:end;
+        align-items: end;
+        margin-top: auto;
+    }
+
+}
+}

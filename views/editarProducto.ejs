@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('./partials/head.ejs') %>
+
+    <% if (producto && producto.id) { %>
+        <title>Editar <%= producto.nombre %></title>
+    <% } else { %>
+        <title>Producto no encontrado</title>
+    <% } %>
+
+
+</head>
+<body>
+
+<!-- -------- HEADER -------- -->
+<%- include('./partials/header.ejs') %>
+
+<!-- -------- MAIN -------- -->
+<main class="contenedor-vista-editar">
+    <% if (producto && producto.id) { %>
+        <h1>Editar <%= producto.nombre %></h1>
+        <form class="formulario-editar" action="/productos/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" value="<%= producto.nombre %>" required>
+            </div>
+            <div>
+                <label for="marca">Marca:</label>
+                <input type="text" id="marca" name="marca" value="<%= producto.marca %>" required>
+            </div>
+            <div>
+                <label for="categoria">Categoria:</label>
+                <select name="categoria">
+                    <option value="Componentes para PC" selected>Componentes para PC</option>
+                    <option value="Accesorios y Periféricos">Accesorios y Periféricos</option>
+                    <option value="Consolas">Consolas</option>
+                    <option value="Videojuegos">Videojuegos</option>
+                    <option value="Accesorios para consolas">Accesorios para consolas</option>
+                </select>
+            </div>
+            <div>
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion"><%= producto.descripcion %></textarea>
+            </div>
+            <div>
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio" value="<%= producto.precio %>" required>
+            </div>
+            <div class="contenedor-imagenes-editar">
+              <label for="imagen">Imagen:</label>
+              <input type="file" id="imagen" name="imagen" accept="image/*">
+              <div class="editar-img-vista-previa">
+                <p>Imagen elegida:</p>
+                <img id="preview-img" src="/images/<%= producto.imagen %>" width="100">
+              </div>
+            </div>
+            <div class="btn-editar-view">
+                <button type="submit">Actualizar</button>
+                <a href="/productos"><button class="btn-editar-form" type="button">Cancelar</button></a>
+            </div>
+        </form>
+    <% } else { %>
+        <h1>PRODUCTO NO ENCONTRADO</h1>
+    <% } %>
+</main>
+
+<!-- -------- FOOTER -------- -->
+<%- include('./partials/footer.ejs') %>
+
+<script src="/script.js"></script>
+<script src="/scriptEditarVista.js"></script>
+
+
+</body>
+</html>
