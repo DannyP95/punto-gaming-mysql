@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-    <%- include ('./partials/head.ejs') %>
+    <%- include ('../partials/head.ejs') %>
     
     <title>Crear nuevo producto</title>
 
@@ -10,7 +10,7 @@
 <body>
 
 <!-- -------- HEADER -------- -->
-<%- include('./partials/header.ejs') %>
+<%- include('../partials/header.ejs') %>
 
 <!-- -------- MAIN -------- -->
 <main>
@@ -24,14 +24,14 @@
             <img src="/images/<%= producto.imagen %>">
         </div>
         <div class="eliminar-botones">
-            <a href="/"><button>Ir al inicio</button></a>
             <a href="/productos"><button>Volver</button></a>
+            <a href="/"><button>Ir al inicio</button></a>
         </div>
     </div>
 </main>
 
 <!-- -------- FOOTER -------- -->
-<%- include('./partials/footer.ejs') %>
+<%- include('../partials/footer.ejs') %>
 
 <script src="/script.js"></script>
 

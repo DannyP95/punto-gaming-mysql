@@ -369,7 +369,7 @@ main{
     border: 2px solid rgb(0, 0, 114);
     border-radius: 15px;
     background-color: white;
-    color: blue;
+    color: rgb(0, 0, 100);
     text-transform: uppercase;
     font-size: 25px;
 }
@@ -436,18 +436,21 @@ main{
 }
 
 .crear-botones button, .eliminar-botones button{
-    width: 85%;
-    margin: 3px auto;
-    padding: 5px 10px;
+    width: 300px !important;
+    margin: 3px auto !important;
+    padding: 5px 10px !important;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
     border: 2px solid rgb(0, 0, 114);
     border-radius: 15px;
     background-color: white;
     color: blue;
+    text-decoration: none;
     text-transform: uppercase;
-    font-size: 15px;
 }
 
-.crear-botones button:hover, .eliminar-botones button:hover{
+.crear-botones button:hover{
     border: 2px solid white;
     color: white;
     background-color: rgb(0, 0, 114);
@@ -544,29 +547,25 @@ main{
 
 .btn-editar-view{
     width: 95%;
+    flex-direction: column !important;
     align-items: center;
-    display: block;
     text-decoration: none;
     padding: 0;
 }
 
 .btn-editar-view a{
     padding: 0;
+    width: auto !important;
+    text-decoration: none;
 }
 
-.btn-editar-form{
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
-.btn-editar-view button, .btn-editar-view a{
-    width: 100%;
-    margin: 3px 0px;
+.btn-editar-actualizar, .btn-editar-cancelar{
+    width: 300px !important;
+    margin: 3px 0px !important;
+    padding: 5px 10px !important;
     font-size: 25px;
     display: flex;
     justify-content: center;
-    padding: 5px 10px;
     border: 2px solid rgb(0, 0, 114);
     border-radius: 15px;
     background-color: white;
@@ -575,7 +574,7 @@ main{
     text-transform: uppercase;
 }
 
-.btn-editar-view button:hover{
+.btn-editar-actualizar:hover, .btn-editar-view a:hover button{
     border: 2px solid white;
     color: white;
     background-color: rgb(0, 0, 114);
@@ -624,15 +623,33 @@ main{
 }
 
 .eliminar-botones a{
+    width: 300px !important;
+    margin: 3px auto !important;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid rgb(0, 0, 114);
+    border-radius: 15px;
+    background-color: white;
+    color: blue;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 .eliminar-botones button{
     width: 250px;
     margin: 3px auto;
+    /* padding: 5px 10px !important; */
     display: flex;
     justify-content: center;
 }
+
+.eliminar-botones a button{
+    border: 2px solid rgb(0, 0, 114, 0) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
 
 /* --------------- FOOTER --------------- */
 
@@ -879,6 +896,7 @@ footer div{
     .formulario-editar img {
         max-height: 120px;
         padding: 0 50px;
+    }
 }
 
 /* --------------- LAPTOP --------------- */
@@ -954,7 +972,7 @@ footer div{
         /* max-height: 500px; */
     }
 
-    /* PRODUCTO  */
+    /* ------------------- PRODUCTO ------------------ */
 
     .producto{
         width: 21%;
@@ -989,6 +1007,17 @@ footer div{
         z-index: 3;
     }
 
+
+    .btn-productos button:hover{
+        border: 2px solid white !important;
+        border-radius: 15px;
+        color: white;
+        background-color: rgb(0, 0, 0, 0);
+    }
+
+    
+    /* --------------- PÁGINA CREAR PRODUCTO --------------- */
+    
     .btn-crear-producto button:hover{
         background-color: white;
         color: rgb(0, 0, 114);
@@ -998,9 +1027,6 @@ footer div{
         padding: 10px;
         width: 50%;
     }
-
-    /* --------------- PÁGINA CREAR PRODUCTO --------------- */
-    
     .formulario-crear-producto{
         width: 80%;
         text-align: center;
@@ -1010,7 +1036,7 @@ footer div{
     .crear-botones button{
         width: 300px;
     }
-/* --------------- PÁGINA CREAR PRODUCTO --------------- */
+/* --------------- PÁGINA ELIMINAR PRODUCTO --------------- */
 
 .eliminar-imagen img{
     width: auto;
@@ -1021,18 +1047,8 @@ footer div{
     display: flex !important;
     justify-content: space-evenly;
 }
-
-/* .eliminar-botones { */
-/* width: 300px; */
-/* align-items: center;
-display: block !important;
-    display: flex !important
-    ;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto; */
     
-/* --------------- PÁGINA CREAR PRODUCTO --------------- */
+/* --------------- PÁGINA EDITAR PRODUCTO --------------- */
 
 .formulario-editar{
     width: 69%;
@@ -1109,5 +1125,11 @@ display: block !important;
         margin-top: auto;
     }
 
-}
+    
+    .eliminar-botones button:hover{
+        border: 2px solid white !important;
+        color: white;
+        background-color: rgb(0, 0, 114);
+    }
+
 }

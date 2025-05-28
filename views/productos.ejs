@@ -19,17 +19,17 @@
                     </div>
                     <h2><%= producto.nombre %></h2>
                     <h3><%= producto.marca %></h3>
-                    <h4><%= producto.categoria ? producto.categoria : 'Sin Categoria' %></h4>
+                    <h4><%= producto.Categoria ? producto.Categoria.nombre : 'Sin categoria' %></h4>
                     <div class="producto-descripcion">
                         <p><%= producto.descripcion %></p>
                     </div>
                     <h5>$ <%= producto.precio %></h5>
 
                     <div class="btn-productos">
+                        <a href="/productos/editar/<%=producto.id%>"><button>Editar</button></a>
                         <form class="formulario-btn-eliminar" action="/productos/eliminar/<%= producto.id %>?_method=DELETE" method="POST">
                             <button type="submit">Eliminar</button>
                         </form>
-                        <a href="/productos/<%=producto.id%>"><button>Editar</button></a>
                     </div>
                 
                 </div>

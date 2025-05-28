@@ -1,9 +1,10 @@
 const express = require('express')
-const router = express.Router()
 const multer = require('multer');
+const productosController = require('../controllers/productosController');
 
-const {productosController} = require('../controllers/productosController')
+const router = express.Router()
 
+// MULTER 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'public/images');
@@ -14,19 +15,19 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
-// INDEX
-router.get('/', productosController.mostrarProductos);
+router.get('/', (req, res) =>{
+    res.render('index')
+});
 
-// CREAR 
-router.get('/crear', productosController.nuevo);
-router.post('/crear', upload.single('imagen'), productosController.crear);
+router.get('/productos', productosController.lista);
 
-// ELIMINAR 
-router.get('/eliminar', productosController.eliminarView);
-router.delete('/eliminar/:id', productosController.eliminar);
+router.get('/productos/crear', productosController.crear);
+router.post('/productos/crear', upload.single('imagen'), productosController.nuevo);
 
-// EDITAR 
-router.get('/:id', productosController.editar);
-router.put('/:id', upload.single('imagen'), productosController.actualizar);
+router.get('/productos/editar/:id', productosController.editar);
+router.put('/productos/editar/:id', upload.single('imagen'), productosController.actualizar);
+
+router.get('/productos/eliminar/:id',productosController.eliminar )
+router.delete('/productos/eliminar/:id', productosController.eliminarView);
 
 module.exports = router;
