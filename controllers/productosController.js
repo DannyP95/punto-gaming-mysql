@@ -13,18 +13,6 @@ const productosController = {
         }
     },
 
-    // nuevo: async(req, res) => {
-    //     try {
-    //         const productos = await Producto.findAll({include: {
-    //         model: Categoria,
-    //         as: 'Categoria'
-    //         }});
-    //         res.render('productos', {crearProducto});
-    //     } catch (error) {
-    //         res.status(500).send('Error al mostrar el index');
-    //     }
-    // },
-
   crear: async (req, res) => {
     try {
       const categorias = await Categoria.findAll();
@@ -75,7 +63,7 @@ const productosController = {
     }
   },
 
-  eliminar: async (req, res) => {
+  eliminarView: async (req, res) => {
     const { id } = req.params;
     try {
       const producto = await Producto.findByPk(id);
@@ -89,7 +77,7 @@ const productosController = {
     }
   },
 
-  eliminarView: async (req, res) => {
+  eliminar: async (req, res) => {
   const { id } = req.params;
   try {
     const producto = await Producto.findByPk(id);

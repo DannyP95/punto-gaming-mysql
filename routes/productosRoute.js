@@ -27,7 +27,7 @@ router.post('/productos/crear', upload.single('imagen'), productosController.nue
 router.get('/productos/editar/:id', productosController.editar);
 router.put('/productos/editar/:id', upload.single('imagen'), productosController.actualizar);
 
-router.get('/productos/eliminar/:id',productosController.eliminar )
-router.delete('/productos/eliminar/:id', productosController.eliminarView);
+router.get('/productos/eliminar/:id',productosController.eliminarView )
+router.delete('/productos/eliminar/:id', productosController.eliminar);
 
 module.exports = router;
